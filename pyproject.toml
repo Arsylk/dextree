@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "dextree"
+version = "1.0.0"
+dependencies = [
+	"ansicolors",
+	"typer",
+	"lief"
+]
+
+[project.scripts]
+dextree = "dextree.main:setuptools_main"
+
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.ruff.lint]
+ignore = ["E501"]
+
+[tool.ruff.format]
+quote-style = "single"
